@@ -9,7 +9,7 @@ RUN tar xf kernel-dev.tar && rm kernel-dev.tar
 RUN apt-get update
 RUN apt install -y kmod python3-bpfcc
 
-COPY hello_world.py /root
+COPY test/hello_world.py /root
 
 WORKDIR /root
 CMD mount -t debugfs debugfs /sys/kernel/debug && /bin/bash
